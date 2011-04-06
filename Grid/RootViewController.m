@@ -66,8 +66,9 @@
     GridTableViewCell *cell = (GridTableViewCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[GridTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell.lineColor = [UIColor blackColor];
     }
-
+	
 	// Since we are drawing the lines ourself, we need to know which cell is the top cell in the table so that
 	// we can draw the line on the top
 	if (indexPath.row == 0)
